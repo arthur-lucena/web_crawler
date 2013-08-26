@@ -1,8 +1,7 @@
-#[web_crawler]
+#Web Crawler
 
 ===========
-##Web crawler
 
-##Developed in:
+###Developed in:
 
 *Ruby
