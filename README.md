@@ -1,7 +1,7 @@
-#Web Crawler
+# Web Crawler
 
 ===========
 
-###Developed in:
+### Developed in:
 
-*Ruby
+* Ruby
