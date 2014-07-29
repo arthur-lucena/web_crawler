@@ -5,12 +5,14 @@ require "open-uri"
 require "nokogiri"
 require "yaml" 
  
- 
+
+config = YAML.load_file("config.json");
+url = config["url"]
 #puts("type URL: ")
 #url=gets
  
 #site = open("#{url}")
-site = open("http://g1.globo.com")
+site = open(url)
  
 doc = Nokogiri::HTML(site)
  
