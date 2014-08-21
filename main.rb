@@ -29,9 +29,16 @@ doc = Nokogiri::HTML(site)
 #filter=gets
  
 #elems = document.css("#{filter}").text
-elems = doc.css("a").each do |link|
-	puts "---------------------------"
-	#puts YAML::dump(link)
-	puts link.content.strip#.gsub(/\s+/, "")
+# iterando pelos links da página principal
+doc.css("a").each do |link|
+	# encontrado uma palavra no link 
+	if /não(.*)/i.match(link.content)
+		#puts YAML::dump(link)
+		puts "---------------------------"
+		puts link.content.strip#.gsub(/\s+/, "")
+		puts link.attribute("href")
+		puts "\n"
+	else 
+		#puts "não é um link procurado"
+	end	
 end
-#puts YAML::dump(elems)
