@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
- 
-require "rubygems"
-require "open-uri"
-require "nokogiri"
-require "yaml" 
- 
-config = YAML.load_file("config.json");
-puts config["url"]
